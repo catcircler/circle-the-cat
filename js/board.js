@@ -337,7 +337,7 @@ function Board(ctx) {
       }
 
     }
-    return "YOU FAIL! But try again";
+    return "YOU FAIL!";
   };
 
   
