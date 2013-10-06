@@ -2,7 +2,6 @@ function getMouseButton(e) {
   return(e? e.which: window.event.button);
 }
 
-
 function Circle(x, y, r) {
   var self = this;
   this.radius = r;
@@ -36,10 +35,8 @@ function Circle(x, y, r) {
   };
 }
 
-
 function Cat(column, row) {
   var self = this;
-
 
   this.col = column;
   this.row = row;
@@ -61,8 +58,6 @@ function Cat(column, row) {
     return {x: self.x, y: self.y};
   };
 }
-
-
 
 
 function Game(ctx) {
@@ -121,18 +116,16 @@ function Game(ctx) {
   };
   
   this.winGame = function() {
-    document.getElementById('panelTitle').innerHTML = 'Follow link below board';
+    document.getElementById('panelTitle').innerHTML = 'Will you go to snowball with me?';
     $('#panel').fadeIn(function() {});
     setTimeout(run, 2000);
   };
   this.loseGame = function() {
-    document.getElementById('panelTitle').innerHTML = 'Okay, but feel free to give it another try';
+    document.getElementById('panelTitle').innerHTML = 'Try again';
     $('#panel').fadeIn(function() {});
     setTimeout(run, 2000);
   };
 }
-
-
 
 
 function run() {
@@ -143,12 +136,9 @@ function run() {
   game.run();
 }
 
-
 function supports_canvas() {
   return !!document.createElement('canvas').getContext;
 }
-
-
 
 
 function checkCanvas() {
@@ -162,7 +152,6 @@ function checkCanvas() {
   }
 }
 
-
 function startUp() {
   if (checkCanvas()) { 
     run();
@@ -171,4 +160,3 @@ function startUp() {
     alert("Sorry, but your browser does not support the canvas tag.");
   }
 }
-
